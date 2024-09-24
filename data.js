@@ -1,0 +1,20 @@
+export const questions = [
+  ['The first woman who won a Nobel Prize', 'Marie Curie'],
+  ['Chrome, Safari, Firefox and Explorer', 'Web browsers'],
+  ['The capital of Finland', 'Helsinki'],
+  ['Name the Coffee shop in US sitcom Friends', 'Central Perk'],
+  ['Penne is this kind of food', 'Pasta'],
+  ['The birthplace of the pizza', 'Naples'],
+  ['This planet has the most moons', 'Saturn'],
+  ['The most popular drink in the world', 'Coffee'],
+  ['The hottest planet in the solar system', 'Venus'],
+  ['The largest American state (by area)', 'Alaska'],
+  ['The smallest country in the world', 'Vatican'],
+  ['The national dish of Spain', 'Paella'],
+  ['Harvard University is located there', 'Cambridge'],
+  ['The currency of Japan', 'Yen'],
+  ['The largest organ in the human body', 'Skin'],
+  ['The last letter of the Greek alphabet', 'Omega'],
+  ['The nationality of Picasso', 'Spanish'],
+  ['This science deals with the motion of projectiles', 'Ballistics']
+];

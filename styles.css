@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color:rgb(154, 129, 183);
+}
+
+.main {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.gallows-img {
+  width: 300px;
+}
+
+.right {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.word {
+  display: flex;
+  gap: 15px;
+}
+
+.letter {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.letter-empty {
+  width: 30px;
+  height: 30px;
+  border-bottom: none;
+}
+
+.keyboard {
+  width: 450px;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.key {
+  background-color: rgb(133, 57, 205);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 3px 3px 3px rgb(60, 9, 107);
+}
+
+.key:hover {
+  background-color: rgb(104, 31, 172);
+  transition: 0.5s;
+}
+
+.key-true {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(121, 211, 211);
+  box-shadow: inset 3px 3px 10px rgb(40, 153, 153);
+  animation: KeyAnimationTrue 1s;
+}
+
+.key-false {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(206, 108, 108);
+  box-shadow: inset 3px 3px 10px rgb(195, 68, 68);
+  animation: KeyAnimationFalse 1s;
+}
+
+@keyframes KeyAnimationTrue {
+  from {
+    background-color: rgb(90, 16, 159);
+    box-shadow: inset 0px 0px 0px rgb(40, 153, 153);
+  }
+
+  50% {
+    box-shadow: 3px 3px 10px rgb(90, 16, 159);
+  }
+
+  to {
+    background-color: rgb(121, 211, 211);
+    box-shadow: 0px 0px 0px rgb(90, 16, 159), inset 3px 3px 10px rgb(40, 153, 153);
+  }
+}
+
+@keyframes KeyAnimationFalse {
+  from {
+    background-color: rgb(90, 16, 159);
+    box-shadow: inset 0px 0px 0px rgb(195, 68, 68);
+  }
+
+  50% {
+    box-shadow: 3px 3px 10px rgb(90, 16, 159);
+  }
+
+  to {
+    background-color: rgb(206, 108, 108);
+    box-shadow: 0px 0px 0px rgb(90, 16, 159), inset 3px 3px 10px rgb(195, 68, 68);
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(184, 178, 190, 0.25);
+}
+
+.modal__content {
+  width: 230px;
+  height: 100px;
+  padding: 20px;
+  background-color:rgb(48, 11, 83);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new-game-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal__text {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.modal__word {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .right {
+    width: calc(400px + (600 - 400) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+
+  .keyboard {
+    width: calc(300px + (450 - 300) * ((100vw - 1000px) / (1400 - 1000)));
+    padding-top: calc(30px + (50 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+
+  .key {
+    width: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    height: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    font-size: calc(16px + (20 - 16) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+
+  .key-true {
+    width: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    height: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    font-size: calc(16px + (20 - 16) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+  
+  .key-false {
+    width: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    height: calc(30px + (40 - 30) * ((100vw - 1000px) / (1400 - 1000)));
+    font-size: calc(16px + (20 - 16) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+
+  .letter {
+    width: calc(20px + (30 - 20) * ((100vw - 1000px) / (1400 - 1000)));
+    height: calc(20px + (30 - 20) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+
+  .gallows-img {
+    width: calc(200px + (300 - 200) * ((100vw - 1000px) / (1400 - 1000)));
+  }
+}
+
+@media (max-width: 1000px) {
+  .right {
+    width: 400px;
+  }
+
+  .keyboard {
+    width: 300px;
+    padding-top: 30px;
+  }
+
+  .key {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .key-true {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .key-false {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .letter {
+    width: 20px;
+    height: 20px;
+  }
+
+  .word {
+    gap: 10px
+  }
+
+  .gallows-img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 680px) {
+  .right {
+    width: 300px;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+}
